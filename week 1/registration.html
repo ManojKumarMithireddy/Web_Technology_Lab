@@ -1,0 +1,44 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="./res.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Register</h2>
+        <form action="#" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required="">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required="">
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required="">
+            
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required="">
+            
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required="">
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required="">
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required=""></textarea>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required="">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+</body></html>

@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(red,black);
+}
+
+#loginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aqua;
+    border-radius: 5px;
+    height: 45%;
+    width: 20vw;
+}
+
+#loginform form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+form label{
+    padding: 5px;
+}
+
+form input{
+    margin: 5px;
+}
+
+#subbtn{
+    margin: 15px;
+    padding: 5px;
+    color: black;
+    background-color: aliceblue;
+}
+
+#subbtn:hover{
+    color: aliceblue;
+    background-image: linear-gradient(red,black);
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+}
