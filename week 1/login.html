@@ -14,13 +14,27 @@
             <input type="text" id="uname">
             <label for="pass">Password:</label> 
             <input type="password" id="pass">
-            <input type="submit" id="subbtn">
+            <input type="submit" id="subbtn" value="Login">
             <div class="links">
                 <a href="#">Forgot Password ?</a>
-                <a href="./registration.html">Sign up</a>
+                <a href="./signup.html">Sign up</a>
             </div>
             
         </form>
     </div>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const uname = document.querySelector('#uname').value;
+            const pass = document.querySelector('#pass').value;
+            if(uname === 'admin' && pass === 'admin'){
+                alert('Login Successful');
+                window.location.href = './index.html';
+            } else {
+                alert('Invalid Credentials');
+            }
+        });
+    </script>
 </body>
 </html>
