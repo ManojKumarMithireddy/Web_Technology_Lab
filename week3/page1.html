@@ -14,6 +14,7 @@
 
       form {
         display: flex;
+        justify-content: center;
         flex-direction: column;
         border: 1px solid black;
         padding: 20px;
@@ -34,10 +35,10 @@
   <body>
     <div>
       <form>
-        <label for="name">Name:</label>
+        <label for="name">Name: &NonBreakingSpace;</label>
         <input type="text" id="name" name="name" minlength="3" required />
         <br />
-        <label for="age">Age:</label>
+        <label for="age">Age: &nbsp;</label>
         <input type="number" id="age" name="age" required />
         <br />
         <label for="mobile">Mobile:</label>
@@ -72,7 +73,7 @@
           document.querySelector('#confirm_password').value;
         if (age > 150 || age < 1) {
           alert('Age must be between 1 and 150');
-        }else if(mobile.length !== 10){
+        } else if (mobile.length !== 10) {
           alert('Mobile number must be 10 digits');
         } else if (password !== confirm_password) {
           alert('Passwords do not match');
