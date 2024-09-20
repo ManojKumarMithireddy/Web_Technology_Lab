@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color changing window</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola</h1>
+    <script>
+        const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink", "brown", "black", "white"];
+        let i = 0;
+        setInterval(() => {
+            document.body.style.backgroundColor = colors[i];
+            i = (i + 1) % colors.length;
+        }, 5000);
+    </script>
+</body>
+</html>
