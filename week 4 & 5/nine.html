@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bold, italic and underline</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 90vh;
+      }
+      .editable {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: rgb(90, 60, 161);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(60, 40, 120);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="editable"
+      contenteditable="true"
+      placeholder="type anything here...."></div>
+    <div id="btns">
+      <button id="bold" onclick="bold()">Bold</button>
+      <button id="italic" onclick="italic()">Italic</button>
+      <button id="underline" onclick="underline()">Underline</button>
+    </div>
+  </body>
+  <script>
+    const bold = () => {
+      document.execCommand('bold');
+    };
+    const italic = () => {
+      document.execCommand('italic');
+    };
+    const underline = () => {
+      document.execCommand('underline');
+    };
+  </script>
+</html>

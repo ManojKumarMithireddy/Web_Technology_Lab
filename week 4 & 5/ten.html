@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>info box</title>
+    <style>
+      button {
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #shadowOverlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      #infoBox {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        z-index: 1000;
+        width: 300px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>this is a dummy page</h1>
+    <p
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sed
+      corporis saepe sapiente quod ullam, recusandae deleniti, dignissimos culpa
+      aliquam perspiciatis natus nesciunt dolorem beatae aperiam quam id cum?
+      Modi.
+    </p>
+    <div id="shadowOverlay"></div>
+    <div id="infoBox">
+      <h1>Info Box</h1>
+      <p>This is an info box</p>
+      <button>Close</button>
+    </div>
+  </body>
+  <script>
+    const button = document.querySelector('button');
+    const infoBox = document.getElementById('infoBox');
+    const shadowOverlay = document.getElementById('shadowOverlay');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      infoBox.style.display = 'block';
+      shadowOverlay.style.display = 'block';
+      button.addEventListener('click', () => {
+        infoBox.style.display = 'none';
+        shadowOverlay.style.display = 'none';
+      });
+    });
+  </script>
+</html>
